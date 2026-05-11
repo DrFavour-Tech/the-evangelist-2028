@@ -1,63 +1,27 @@
-## Foundry
+# The Evangelist 2028 - Task-Authorized NFT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+An ERC-721 NFT collection built with **Foundry** that features a unique "Leader Authorization" gate. Only authorized addresses can mint, and they must pay a minting fee in ETH.
 
-Foundry consists of:
+## 🚀 Deployment Details
+- **Network:** Ethereum Sepolia
+- **Contract Address:** `0xF819639df6aCD4e0E177B6BCA54103B638Fdb7C3`
+- **Etherscan Link:** [View on Sepolia Etherscan](https://sepolia.etherscan.io/address/0xF819639df6aCD4e0E177B6BCA54103B638Fdb7C3)
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 🛠️ Tech Stack
+- **Smart Contracts:** Solidity 0.8.24
+- **Development Framework:** Foundry (Forge & Cast)
+- **Storage:** IPFS (Pinata)
+- **Tokens:** ERC-721 (NFT) & ERC-20 (Mission Token integration)
 
-## Documentation
+## ⚙️ Features
+- **Authorization Gate:** The contract owner must call `authorizeLeader()` before a user can mint.
+- **ETH Minting:** Authorized users can mint by sending 0.01 ETH.
+- **Metadata:** Hosted on IPFS with decentralized JSON storage.
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
+## 🧪 Testing & Deployment
+To run tests locally:
+```bash
+forge test -vv
 
 ```shell
 $ forge --help
